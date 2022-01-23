@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "HASRAS-V1",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"ble.h": "c",
+			"bme280.h": "c"
+		}
+	}
+}
