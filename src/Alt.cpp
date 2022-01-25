@@ -35,14 +35,15 @@ void Altmeter::init(const struct device *dev){
 
 void Altmeter::fetch_bmp280_data(const struct device *dev)
 {
-    struct sensor_value temp, press, humidity;
+    struct sensor_value temp, press, humidity, altitude;
 
     sensor_sample_fetch(dev);
     sensor_channel_get(dev, SENSOR_CHAN_AMBIENT_TEMP, &temp);
     sensor_channel_get(dev, SENSOR_CHAN_PRESS, &press);
+    sensor_channel_get(dev, SENSOR_CHAN_ALTITUDE, &altitude);
     sensor_channel_get(dev, SENSOR_CHAN_HUMIDITY, &humidity);
 
-    printk("temp: %d.%06d; press: %d.%06d; humidity: %d.%06d\n",
-           temp.val1, temp.val2, press.val1, press.val2,
+    printk("temp: %d.%06d; press: %d.%06d; altitude: %d.%06d; humidity: %d.%06d\n",
+           temp.val1, temp.val2, press.val1, press.val2, altitude.val1, altitude.val2,
            humidity.val1, humidity.val2);
 }

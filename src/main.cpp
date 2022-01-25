@@ -5,6 +5,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/*
+ * Source Code Information:
+ * Author: Mark Chen
+ * Organization: Space Technology Laboratory, Tamkang University
+ * Initila Date of Development: Jan 22th, 2022
+ */
+
 #include <zephyr.h>
 #include <device.h>
 #include <devicetree.h>

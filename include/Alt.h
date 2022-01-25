@@ -13,6 +13,7 @@ class Altmeter
         void init(const struct device *dev);
         //static const struct alt_device *get_bme280_device(void);
         void fetch_bmp280_data(const struct device *dev);
+        void altitude_calc(const struct device *dev);
 };
 
 #endif
